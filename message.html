@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    		<!-- now we create a top navbar-->
+	<div class="top">
+        <div class="header">
+            <div class="avatar">
+            <!-- This image to be replaced by a django template tag querying the user's profile picture -->
+            <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="" class="round-image"/>
+
+        
+        <!-- This name to be replaced by a django template tag querying the user's name -->
+        <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey Mary Magdaline</div>
+        </div>
+        </div>
+        <div class="details">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meet your crush &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="index.html" id="pages">Home</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <button id="toggleButton">Hide/Show Navbar</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            search by
+            </h1>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+		<div class="container">
+			<div class="side">
+
+                <div id="navbar">
+				<div class="menu">
+					<ul>
+						<li class="active"><a href="#" id="match">Matches</a></li>
+						<li class="active"> <a href="#" id="messo">Messages</a></li>
+					</ul>
+				
+                </div>
+				<div id="matches">
+					<!-- Add your Matches content here -->
+					<div class="content">
+						<!-- Your Matches content goes here -->
+					</div>
+				</div>
+                <!--Start of the meesages navbar on the right-->
+				<a href="message.html" id="messo">
+				<div id="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/38.jpg" alt="" />
+					</div>
+					<div id="message">
+						<div class="user">Janet</div>
+						<div class="text">Hello Beautiful nice to meet you </div>
+					</div>
+				</div>
+				</a>
+				<div id="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/39.jpg" alt="" />
+					</div>
+					<div id="message">
+						<div class="user">Irene</div>
+						<div class="text">Hey Handsome care to mingle.</div>
+					</div>
+				</div>
+				<div id="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/40.jpg" alt="" />
+					</div>
+					<div id="message">
+						<div class="user">Susan</div>
+						<div class="text">Hey There I'm Caroline we just got matched</div>
+					</div>
+				</div>
+				<div id="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/41.jpg" alt="" />
+					</div>
+					<div id="message">
+						<div class="user">Jane</div>
+						<div class="text">Hey There what a coincidence we meet</div>
+					</div>
+				</div>
+				<div id="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/42.jpg" alt="" />
+					</div>
+					<div id="message">
+						<div class="user">Lucy</div>
+						<div class="text">Hey There I'm Caroline we just got matched</div>
+					</div>
+				</div>
+			</div>
+            </div>
+            <!--end of the side nav bar-->
+
+            <!--Now display all message chat withn this person-->
+            <div class="chat-container">
+                <div class="message sent">Hi</div>
+                <div class="message replied">Hi 2</div>
+                <div class="message sent">How are you?</div>
+                <div class="message replied">I'm good, thanks!</div>
+                <!-- Add more messages as needed -->
+            </div>
+            <script src="js/script.js"></script>
+</body>
+</html>

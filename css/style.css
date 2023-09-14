@@ -1,0 +1,280 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #f5f7fa;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+.top {
+	background: linear-gradient(262deg, #ff7854, #fd267d);
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 1px 8px 0 rgba(0, 20, 20, 0.2);
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.container {
+	display: flex;
+}
+.side {
+	min-width: 320px;
+	height: 200px;
+	background-color: #fff;
+	height: 100%;
+	min-height: 100vh;
+	border-right: 1px solid #e1e1e1;
+}
+.content {
+	width: 30%;
+	height: 20%;
+	display: flex;
+	padding: 20px 0;
+	align-items: center;
+	flex-direction: column;
+}
+.side .header {
+	background: linear-gradient(262deg, #ff7854, #fd267d);
+	width: 100%;
+	height: 100px;
+	box-shadow: 0 1px 8px 0 rgba(0, 20, 20, 0.2);
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.side .header .avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid #fff;
+	box-shadow: 0 1px 8px 0 rgba(0, 20, 20, 0.2);
+}
+
+.side .header .title {
+	padding: 0 10px;
+	color: #fff;
+	font-size: 23px;
+}
+
+.side .menu ul {
+	display: flex;
+	padding: 0 20px;
+}
+
+.side .menu ul li {
+	list-style: none;
+	margin: 0 10px;
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+.side .menu .active {
+	border-bottom: 3px solid #fd5068;
+	padding-bottom: 2px;
+}
+
+.side #messages {
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	transition: 0.2s box-shadow;
+}
+
+.side #messages .avatar img {
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+}
+
+.side #messages .user {
+	padding: 0 10px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+}
+
+.side #messages .text {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 10px;
+	font-weight: 300;
+	font-size: 15px;
+	opacity: 0.8;
+}
+
+.side #messages:hover {
+	box-shadow: 0 0 15px 0 rgba(43, 78, 78, 0.1);
+	border-right: 5px solid #fd5068;
+}
+
+.container .card {
+	position: relative;
+	height: 450px;
+}
+
+.content .card .user {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.5);
+}
+
+.card .user .profile {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	display: block;
+}
+
+.content .card .user .name {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-shadow: 1px 1px 5px #444;
+}
+
+.content .card .user .name span {
+	font-size: 26px;
+}
+
+.content .card .local {
+	display: flex;
+	align-items: center;
+	padding: 0 0 20px 0;
+}
+
+.content .card .local i {
+	margin: 5px 0;
+	color: #fff;
+}
+
+.content .card .local span {
+	color: #fff;
+	padding: 0 10px;
+	text-shadow: 1px 1px 5px #444;
+}
+
+.content .buttons {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.content .buttons .no i {
+	color: #fd2e79;
+	font-size: 33px;
+}
+
+.content .buttons .star i {
+	color: #2bb1ff;
+	font-size: 22px;
+}
+
+.content .buttons .heart i {
+	color: #11e298;
+	font-size: 32px;
+}
+
+.content .buttons .no,
+.content .buttons .star,
+.content .buttons .heart {
+	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 70px;
+	margin: 4px;
+	transition: 0.2s transform;
+}
+
+.content .buttons .no:hover,
+.content .buttons .star:hover,
+.content .buttons .heart:hover {
+	transform: scale(1.1);
+}
+
+.content .buttons .star {
+	width: 60px;
+	height: 60px;
+}
+#toggleButton {
+    margin: 10px;
+}
+#pages {
+	margin: 10px;
+	text-align: left; /* Set text alignment to left */
+	padding: 0; /* Remove padding */
+	margin: 0; /* Remove margin */
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;  /*Adjust the gap between columns as needed */
+}
+.content {
+    width: calc(25% - 10px); /* Subtract margin to ensure three profiles per column */
+    float: none; /* Remove float property */
+    margin: 0;
+	height: 300px;
+}
+
+/* Optional: Add a media query to make the layout responsive */
+@media (max-width: 768px) {
+    .content {
+        width: calc(50% - 20px); /* Two profiles per column on smaller screens */
+    }
+}
+
+.title {
+	float: left;
+}
+.avat {
+	float: right;
+}
+
+/***
+css for message.html
+***/
+
+.chat-container {
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-left: 50px;
+}
+.message {
+	clear: both;
+	margin-bottom: 10px;
+}
+.sent {
+	text-align: right;
+	color: #333;
+}
+.replied {
+	text-align: left;
+	color: blue;
+}
+
+/* Style the round image */
+.round-image {
+    border-radius: 50%; /* Make the image round */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 80px; /* Set the width to your desired size */
+    height: 80px; /* Set the height to your desired size */
+}
