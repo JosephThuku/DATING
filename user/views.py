@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
@@ -26,14 +26,14 @@ def signup(request):
         if password1 == password2:
             if User.objects.filter(username=username).exists():
                 messages.error(request, 'Username already exists')
-                return HttpResponseRedirect(reverse('user:index'))
+                return redirect('signup')
             elif User.objects.filter(email=email).exists():
                 messages.error(request, 'Email already exists')
-                return HttpResponseRedirect(reverse('user:index'))
+                return redirect('signup')
             else:
                 user = User.objects.create_user(username=username, email=email, password=password1, first_name=firstname, last_name=lastname)
                 user.save()
-                return render(request, 'login.html')
+                return redirect('login')
         else:
             messages.error(request, 'Passwords do not match')
             return render(request, 'signup.html')
@@ -51,7 +51,7 @@ def login_user(request):
         user = authenticate(username=username, password=password)
         if user:
             login(request, user)
-            return render(request, 'index.html')
+            return redirect("/dating/home")
         else:
             messages.error(request, 'Invalid username or password')
             return render(request, 'login.html')

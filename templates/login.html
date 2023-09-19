@@ -86,13 +86,13 @@ a:hover {
 </head>
 <body>
     <h1>Login</h1>
-    <form method="post">
+    <form action="" method="post">
         {% csrf_token %}
         <label for="username">Username or Email:</label>
         <input type="text" id="username" name="username" required><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <input type="password" id="password" name="pass1" required><br><br>
 
         <input type="checkbox" id="remember_me" name="remember_me">
         <label for="remember_me">Remember Me</label><br><br>

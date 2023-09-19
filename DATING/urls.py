@@ -21,4 +21,5 @@ from user  import urls as user_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include(user_urls)),
+    path('dating/', include('datingapp.urls')),
 ]
