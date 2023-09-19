@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>UpdateProfile</title>
     <style>
         /* Reset some default styles */
 * {
@@ -119,7 +119,6 @@ nav a:hover {
 .logo img {
     height: 50px;
 }
-
     </style>
 </head>
 <body>
@@ -143,31 +142,33 @@ nav a:hover {
             <a href="#" class="cta-button">Get Started</a>
         </div>
     </header>
-    <h1>Sign Up</h1>
+    <h1>Tell us a little more about yourself to improve the chances of getting matched with your crush</h1>
     <form method="post" action="">
         {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <label for="username">Bio: describe your self</label>
+        <input type="text" id="username" name="bio" required><br><br>
 
-        <label for="username">first name:</label>
-        <input type="text" id="username" name="fname" ><br><br>
-
-        <label for="username">last name:</label>
-        <input type="text" id="username" name="lname" required><br><br>
+        <label for="username">career</label>
+        <input type="text" id="username" name="career"><br><br>
 
 
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Hobbies:</label>
+        <input type="text" id="email" name="hobbies"><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="pass1" required><br><br>
+        <label for="password">intrests:</label>
+        <input type="text" id="password" name="intrests"><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="pass2" required><br><br>
-<!--
-        <label for="date_of_birth">Date of Birth:</label>
-        <input type="date" id="date_of_birth" name="date_of_birth"><br><br>
+        <label for="password">extrovert:</label>
+        <input type="text" id="password" name="extrovert"><br><br>
+        
+
+        <label for="password">introvert:</label>
+        <input type="text" id="password" name="introvert"><br><br>
+        
+
+        <label for="career">Career:</label>
+        <input type="text" id="username" name="career"><br><br>
 
         <label for="profile_picture">Profile Picture:</label>
         <input type="file" id="profile_picture" name="profile_picture"><br><br>
@@ -185,12 +186,10 @@ nav a:hover {
         <label for="campus">Campus:</label>
         <input type="text" id="campus" name="campus"><br><br>
 
-    <p>Already have an account? Log in</a></p>
-    -->
         <input type="checkbox" id="terms" name="terms" required>
         <label for="terms">I agree to the terms and conditions</label><br><br>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Update Profile</button>
     </form>
 </body>
 </html>

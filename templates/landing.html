@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Dating</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff5440;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff5440;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff6f61;
+}
+
+/* Feature Styles */
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.feature img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+/* Testimonial Styles */
+.testimonials {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.testimonial {
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Signup Styles */
+.signup {
+    text-align: center;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.signup h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.signup p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 30px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links ul li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff5440;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Campus Dating">
+            </div>
+            <ul>
+                <li><a href="/dating/home">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="/user/signup">Sign Up</a></li>
+                <li><a href="/user/login">Log In</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Find Love on Campus</h1>
+            <p>Connect with fellow students near you for meaningful relationships.</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </header>
+    
+    <section class="features">
+        <!-- Feature 1 -->
+        <div class="feature">
+            <img src="phone.jpeg" alt="Safe & Secure">
+            <h2>Safe & Secure</h2>
+            <p>Your privacy is our priority. We use state-of-the-art security measures to protect your data.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature">
+            <img src="phone.jpeg" alt="Mobile-Friendly">
+            <h2>Mobile-Friendly</h2>
+            <p>Access Campus Dating on your mobile device, so you can connect on the go.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature">
+            <img src="teens.jpeg" alt="Local Matches">
+            <h2>Local Matches</h2>
+            <p>Find matches from your university and nearby campuses to make dating convenient.</p>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Success Stories</h2>
+        <div class="testimonial">
+            <img src="user1.jpeg" alt="User 1">
+            <p>"I met the love of my life on Campus Dating. Thank you for bringing us together!"</p>
+            <cite>- Sarah &amp; John</cite>
+        </div>
+
+        <div class="testimonial">
+            <img src="user2.jpeg" alt="User 2">
+            <p>"Campus Dating made finding a compatible partner so easy. Highly recommended!"</p>
+            <cite>- Emily &amp; Michael</cite>
+        </div>
+    </section>
+
+    <section class="signup">
+        <h2>Join Campus Dating Today!</h2>
+        <p>Start your journey to finding love on campus. Sign up now!</p>
+        <a href="#" class="cta-button">Sign Up</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Campus Dating">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2023 Campus Dating. All rights reserved.</p>
+    </footer>
+</body>
+</html>

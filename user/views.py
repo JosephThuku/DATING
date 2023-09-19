@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Userprofile, UserMatches, UserLikes, UserDislikes, UserBlock, UserReport
+from .models import Userprofile, UserMatches, UserLikes, UserDislikes, UserBlock, UserReport, UserInterest
 
 
 def index(request):
@@ -57,3 +58,45 @@ def login_user(request):
             return render(request, 'login.html')
     else:
         return render(request, 'login.html')
+
+@login_required(login_url='/user/login')
+def user_profile(request):
+    """
+    update the user profile
+    """
+    if request.method == 'POST':
+        bio = request.POST.get('bio')
+        cumpus = request.POST.get('campus')
+        gender = request.POST.get('gender')
+        hobbies = request.POST.get('hobbies')
+        interests = request.POST.get('interests')
+        introvert = request.POST.get('introvert')
+        extrovert = request.POST.get('extrovert')
+        profile_pic = request.FILES.get('profile_pic')
+        career = request.POST.get('career')
+        #get current user
+        # Get the current user's ID
+# Get the current user's ID as an integer
+        user_id = request.user.id
+
+        # Now, you can assign the user variable to the user with the current user's ID
+       # user = User.objects.get(id=user_id)
+        user = user_id
+        user_profile = Userprofile.objects.create(profile_picture=profile_pic, bio=bio, campus=cumpus, gender=gender, user_id=user)
+        user_profile.save()
+
+        user_intrest = UserInterest.objects.create(hobbies=hobbies, interest=interests, introvert='False', extrovert='True', career=career, user_id=user)
+        user_intrest.save()
+
+        return redirect('/dating/home')
+    else:
+        return render(request, 'profile.html')
+
+
+def logout_user(request):
+    """
+    logout users
+    """
+    logout(request)
+    return redirect('login')
+
